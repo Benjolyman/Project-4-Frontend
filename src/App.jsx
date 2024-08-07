@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import NavBar from "./components/NavBar"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
 
-import './App.css'
 
-function App() {
-
+const App = () => {
+  const user = null; // Replace with your user authentication logic
 
   return (
-    <>
-    <NavBar/>
-    hello
-    </>
-  )
-}
+    <Router>
+      <NavBar user={user} />
+    </Router>
+  );
+};
 
-export default App
+export default App;
